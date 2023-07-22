@@ -6,6 +6,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Set up routes
+
+// User routes
+
+// Authentication routes
+
+// Student routes
 const getStudents = require('./modules/students/get.js');
 app.get('/students', getStudents);
 
