@@ -6,7 +6,7 @@ const get=(req,res)=>{
     connection.query(sql, (error, results)=>{
         if(error){
             // console.log('Error retrieving students from the database: ', error)
-            res.status(500).json({message:'Error retrieving students from the database'});
+            res.status(500).json({message:'Error retrieving students from the database.'});
         }
         else{
             res.send(results);

@@ -8,7 +8,7 @@ const deleteOne = (req, res) =>{
             console.error('Error deleting an existing student from the database:', error);
             res.status(500).json({ message: 'Error deleting an existing user from the database' });
         } else {
-            res.send(results);
+            res.send('Deleted!');
         }
     });
 }
