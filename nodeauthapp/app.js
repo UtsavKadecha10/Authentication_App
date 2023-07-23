@@ -1,15 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const Log = require('./modules/middleware/Logger.js');
+const Auth = require('./modules/middleware/Auth.js');
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-// Set up routes
+app.use(Log);
+app.use(Auth);
 
 // User routes
-
-// Authentication routes
 
 // Student routes
 const getStudents = require('./modules/students/get.js');
