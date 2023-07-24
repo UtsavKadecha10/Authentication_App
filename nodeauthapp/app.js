@@ -10,7 +10,14 @@ app.use(Log);
 app.use(Auth);
 
 // User routes
+const addUser = require('./modules/users/post.js');
+app.post('/users', addUser);
 
+const login = require('./modules/users/login.js');
+app.post('/login', login);
+
+const logout = require('./modules/users/logout.js');
+app.post('/logout', logout);
 // Student routes
 const getStudents = require('./modules/students/get.js');
 app.get('/students', getStudents);
