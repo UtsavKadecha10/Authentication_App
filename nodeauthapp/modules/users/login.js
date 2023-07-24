@@ -12,7 +12,7 @@ const login = (req, res) => {
         else{
             let count = JSON.parse(JSON.stringify(results))[0].cnt;
             if(count==1){
-                const token = jwt.sign({username:username}, "secret-key", {expiresIn: "1h"});
+                const token = jwt.sign({username: username}, "secret-key", {expiresIn: "1h"});
                 res.json({token});
             }
             else{

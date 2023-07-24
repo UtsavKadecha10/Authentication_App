@@ -18,6 +18,7 @@ app.post('/login', login);
 
 const logout = require('./modules/users/logout.js');
 app.post('/logout', logout);
+
 // Student routes
 const getStudents = require('./modules/students/get.js');
 app.get('/students', getStudents);
