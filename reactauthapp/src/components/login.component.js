@@ -18,6 +18,43 @@ const Login = () => {
             let expires = new Date();
             expires.setTime(expires.getTime()+(1000*60*60))
             setCookie('token', resp.data.token, {path: '/', expires})
-        }).catch(error)
+        }).catch(error =>{
+            setMsg("Invalid username or password")
+        });
+        console.log(response);
     }
+    return(
+        <>
+            <h3>Sign In</h3>
+            <div className="mb-3">
+                <label>User name</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter username"
+                    value={username}
+                    onChange={e=>setUsername(e.target.value)}
+                />
+            </div>
+
+            <div className="mb-3">
+                <label>Password</label>
+                <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Enter password"
+                    value={password}
+                    onChange={e=>setPassword(e.target.value)}
+                />
+            </div>
+
+            <div className="mb-3 custom-control custom-checkbox">
+                <input
+                    type="checkbox"
+                    className="custom-control-input"
+                    id
+                />
+            </div>
+        </>
+    )
 }
