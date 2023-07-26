@@ -52,9 +52,27 @@ const Login = () => {
                 <input
                     type="checkbox"
                     className="custom-control-input"
-                    id
+                    id="customCheck1"
                 />
+                <label className="custom-control-label" htmlFor="customeCheck1">
+                    Remember me
+                </label>
             </div>
+
+            <div className="d-grid">
+                <button onClick={handleLogin} className="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+
+            <div className="mb-3">
+                <label>{msg}</label>
+            </div>
+
+            <p className="forgot-password text-right">
+                Forgot <a href='#'>password?</a>
+            </p>
         </>
     )
 }
+export default Login;
