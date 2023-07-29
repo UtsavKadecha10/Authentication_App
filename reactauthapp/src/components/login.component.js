@@ -19,7 +19,7 @@ const Login = () => {
             expires.setTime(expires.getTime()+(1000*60*60))
             setCookie('token', resp.data.token, {path: '/', expires})
         }).catch(error =>{
-            setMsg("Invalid username or password!!")
+            setMsg("Invalid username or password!")
         });
         console.log(response);
     }
